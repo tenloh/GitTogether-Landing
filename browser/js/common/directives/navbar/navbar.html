@@ -1,17 +1,15 @@
 <nav class="navbar navbar-static-top">
     <div class="container">
-        <div class="navbar-header">
-            <fullstack-logo></fullstack-logo>
-        </div>
-        <ul class="nav navbar-nav">
-            <li ng-repeat="item in items" ng-show="!item.auth || isLoggedIn()">
-                <a ui-sref-active="active" ui-sref="{{ item.state }}">{{ item.label }}</a>
-            </li>
-        </ul>
-        <button ng-show="!user" ui-sref="login" class="btn login-button">Login</button>
-        <div ng-show="user" class="welcome">
-            <span>Welcome, {{ user.email }}!</span>
-            <a ng-click="logout()">Logout</a>
+        <div class="row">
+            <div class="navbar-header">
+                <img src="/js/common/directives/mainpage/GT2.png" class="main-icon center-block" />
+            </div>
+            <div class="col-md-4 icons">
+                <a href="https://github.com/Git-Together/GitTogether" class="github-icon"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-md-4 icons">
+                <a href="/GitTogether.dmg" target="_blank" download="GitTogether.dmg"><i class="fa fa-download fa-5x" aria-hidden="true" alt="Electron Download"></i></a>
+            </div>
         </div>
     </div>
 </nav>
